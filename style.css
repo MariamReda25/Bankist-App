@@ -1,0 +1,295 @@
+/***
+--- 01 TYPOGRAPHY SYSTEM
+    - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 02 Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/************************* 
+*****  GENERAL RULES *****
+**************************/
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+* {
+  /* GLOBAL RESET */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #343a40;
+  background-color: #f1f3f5;
+}
+/************************* 
+*****  HEADER      *****
+**************************/
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.2rem auto;
+  padding: 0 3.2rem;
+  margin-bottom: 6.4rem;
+}
+.welcome {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.img-logo {
+  max-width: 5rem;
+  justify-self: center;
+}
+.login-form {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.login-form input {
+  border: none;
+  text-align: center;
+  font-size: 1.6rem;
+  width: 12rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 3rem;
+  border: 1px solid #fff;
+
+  transition: all 0.3s;
+}
+
+.login-form input::placeholder {
+  color: #b3b3b3;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.login-form input:focus {
+  outline: none;
+  border: 1px solid #ced4da;
+}
+
+.login-btn {
+  border: none;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+/************************* 
+*****  MANI APP      *****
+**************************/
+.container {
+  padding: 0 8rem;
+  margin: 0 auto;
+  max-width: 120rem;
+
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 16.5rem) auto;
+  gap: 2rem;
+
+  opacity: 0;
+  transition: all 0.3s;
+}
+.balance-box {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.8rem;
+}
+.balance-label {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.balance-date {
+  color: #999999;
+  font-size: 1.6rem;
+}
+.balance-value {
+  font-size: 4.4rem;
+}
+/************************* 
+*****  MOVEMENTS *****
+**************************/
+.movements {
+  background-color: #fff;
+  border-radius: 1rem;
+  grid-row: 2 / span 3;
+  overflow: scroll;
+}
+/************************* 
+*****  USER MOVEMENTS *****
+**************************/
+.movement {
+  padding: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f5;
+  gap: 2rem;
+}
+.movement__type {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 1.1rem;
+  color: #fff;
+}
+.movement__date {
+  margin-left: 1.4rem;
+  color: #555;
+}
+.movement--deposite {
+  background-image: linear-gradient(to bottom right, #8ce99a, #37b24d);
+}
+.movement--withdrawal {
+  background-image: linear-gradient(to bottom right, #fa5252, #e03131);
+}
+.movement__value {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+/****************************** 
+***** MOVEMENTS OPERATIONS *****
+********************************/
+.movements__operations {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.operation__type {
+  padding: 3.2rem;
+  border-radius: 1rem;
+}
+.operation--transfer {
+  background-image: linear-gradient(to bottom right, #fcc419, #f08c00);
+}
+.operation--request-loan {
+  background-image: linear-gradient(to bottom right, #8ce99a, #37b24d);
+}
+.operation--close {
+  background-image: linear-gradient(to bottom right, #fa5252, #e03131);
+}
+
+.operation--title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.operation-form {
+  display: flex;
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.operation-form input {
+  text-align: center;
+  border: none;
+  font-size: 1.6rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.8rem 1.2rem;
+  display: block;
+  transition: all 0.3s;
+}
+.operation-form input:focus {
+  text-align: center;
+  outline: none;
+}
+
+.transfer--input-user,
+.transfer--input-amount {
+  background-color: #ffe066;
+}
+.transfer--input-user:focus,
+.transfer--input-amount:focus {
+  background-color: #ffec99;
+}
+.request--input-amount {
+  background-color: #b2f2bb;
+}
+.request--input-amount:focus {
+  background-color: #d3f9d8;
+}
+.close--input-user,
+.close--input-pin {
+  background-color: #ff8787;
+}
+.close--input-user:focus,
+.close--input-pin:focus {
+  background-color: #ffa8a8;
+}
+.operation-form label {
+  font-size: 1.6rem;
+}
+.btn {
+  border: none;
+  width: 4.8rem;
+  height: 3.2rem;
+  background-color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.btn--request {
+  width: 4.8rem;
+  height: 3.6rem;
+}
+/****************************** 
+***** MOVEMENTS SUMMARY *****
+********************************/
+.summary {
+  grid-column: 1 /2;
+  display: flex;
+  justify-content: space-between;
+}
+.movements-summary {
+  display: flex;
+  gap: 2rem;
+}
+.movement__summary {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.summary__label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.summary__value {
+  font-size: 2.4rem;
+  color: #37b24d;
+}
+.value--out {
+  color: #e03131;
+}
+.icon-sort {
+  width: 2rem;
+  height: 2rem;
+}
+.btn--sort {
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  cursor: pointer;
+}
+.log-out {
+  justify-self: end;
+  font-size: 1.6rem;
+}
+.log-out__time {
+  font-weight: 600;
+}

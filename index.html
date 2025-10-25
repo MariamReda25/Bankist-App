@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Bankist App</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="main-header">
+      <p class="welcome">Log in to get started</p>
+      <img src="logo.png" alt="Bankist logo" class="img-logo" />
+      <form action="" class="login-form">
+        <input
+          type="text"
+          placeholder="user"
+          required
+          class="login--input login--input--user"
+          name="user"
+        />
+        <input
+          type="text"
+          placeholder="PIN"
+          required
+          maxlength="4"
+          name="pin"
+          class="login--input login--input--pin"
+        />
+
+        <button class="login-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="login-btn"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </button>
+      </form>
+    </header>
+    <!-- MAIN APPLICATION -->
+    <main class="container">
+      <!-- BALANCE -->
+      <div class="balance-box">
+        <div>
+          <p class="balance-label">Current balance</p>
+          <p class="balance-date">As 0f 05/03/2037</p>
+        </div>
+        <p class="balance-value">3849 ₤</p>
+      </div>
+      <!-------------------- MOVEMENTS---------------------------------------- -->
+      <div class="movements">
+        <div class="movement">
+          <div>
+            <span class="movement__type movement--deposite"> 1 deposit</span>
+            <span class="movement__date">2 days passed</span>
+          </div>
+          <p class="movement__value">1300</p>
+        </div>
+        <div class="movement">
+          <span class="movement__type movement--withdrawal"> 2 withdrawal</span>
+          <p class="movement__value">-130</p>
+        </div>
+      </div>
+      <!--------------------- OPERATIONS -------------------------------->
+      <div class="movements__operations">
+        <!----------- TRANSFER ------->
+        <div class="operation__type operation--transfer">
+          <p class="operation--title">Transfer money</p>
+          <form class="operation-form">
+            <div class="form-group">
+              <input
+                type="text"
+                class="transfer--input-user"
+                name="user-recieve"
+              />
+              <label> Transfer to</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                class="transfer--input-amount"
+                name="amount"
+              />
+              <label>Amount</label>
+            </div>
+            <button class="btn btn--transfer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class=" "
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <!---------------- REQUEST LOAN --------------->
+        <div class="operation__type operation--request-loan">
+          <p class="operation--title">Request loan</p>
+          <form class="operation-form">
+            <div class="form-group">
+              <input
+                type="number"
+                class="request--input-amount"
+                name="amount"
+              />
+              <label>Amount</label>
+            </div>
+            <button class="btn btn--request">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <!----------------- CLOSE ACCOUNT ------------------------>
+        <div class="operation__type operation--close">
+          <p class="operation--title">Close account</p>
+          <form class="operation-form">
+            <div class="form-group">
+              <input type="text" class="close--input-user" name="user-name" />
+              <label> Confirm User</label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="close--input-pin" name="user-pin" />
+              <label>Confirm PIN</label>
+            </div>
+            <button class="btn btn--close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!------------------------------- SUMMARY---------------------------------- -->
+      <div class="summary">
+        <div class="movements-summary">
+          <div class="movement__summary">
+            <span class="summary__label">in</span>
+            <span class="summary__value value--in">5020 £</span>
+          </div>
+          <div class="movement__summary">
+            <span class="summary__label">out</span>
+            <span class="summary__value value--out">1180 £</span>
+          </div>
+          <div class="movement__summary">
+            <span class="summary__label">interest</span>
+            <span class="summary__value value--interest">59.4 £</span>
+          </div>
+        </div>
+        <button class="btn--sort">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon-sort"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"
+            />
+          </svg>
+          <span>sort</span>
+        </button>
+      </div>
+      <div class="log-out">
+        <span class="log-out__label"> You will be logged out in</span>
+        <span class="log-out__time">5:00</span>
+      </div>
+    </main>
+  </body>
+</html>
