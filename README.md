@@ -8,13 +8,14 @@ A minimalist online banking web application that simulates modern banking featur
 
 **Bankist** is a front-end web app designed to demonstrate key JavaScript concepts such as **DOM manipulation**, **event handling**, **array methods**, **timers**, and **state updates**.  
 It mimics core banking operations, allowing users to:
+
 - Log in using secure credentials,
 - Transfer funds between accounts,
 - Request loans,
 - Close their accounts, and
 - Sort transactions — all dynamically updated on the UI.
 
-This project is inspired by **Jonas Schmedtmann’s “Bankist” project** from *The Complete JavaScript Course*
+This project is inspired by **Jonas Schmedtmann’s “Bankist” project** from _The Complete JavaScript Course_
 
 ---
 
@@ -31,9 +32,10 @@ The Bankist App is built around **event-driven UI updates** and maintains a cons
 
 - **UI Update Cycle:**  
   Every successful user action (login, transfer, loan, close account) triggers the **Update UI** block, which:
-  - Calculates and displays the current balance  
-  - Computes income, outcome, and interest summary  
-  - Renders all movements (transactions)  
+
+  - Calculates and displays the current balance
+  - Computes income, outcome, and interest summary
+  - Renders all movements (transactions)
   - Starts or restarts the logout timer
 
 - **Security Simulation:**  
@@ -68,20 +70,25 @@ The Bankist App is built around **event-driven UI updates** and maintains a cons
   Every action immediately reflects changes in the interface.
 
 ---
+
 ## 🧭 How to Run the Project
 
 ### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/MariamReda25/Bankist-App
 cd bankist-app
 ```
+
 ### 2️⃣ Run Locally
+
 Open index.html directly in your browser
 —or— use a live server:
 
 ## 💻 Projet Demo :
+
 🔗 [Demo](https://drive.google.com/file/d/1UL6VDAO5f0GvTiuuegAOWQxbmFM44FpX/view?usp=sharing)
 
-  
 ## 📌 Project link on Netlify :
-🔗 https://bankist-app-array-practice.netlify.app/
+
+🔗 https://bankist-app-array-project.netlify.app/
