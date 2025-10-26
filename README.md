@@ -92,3 +92,8 @@ Open index.html directly in your browser
 ## 📌 Project link on Netlify :
 
 🔗 https://bankist-app-array-project.netlify.app/
+
+
+## 🙏 Acknowledgments
+
+- Course material from [Jonas Schmedtmann's JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/)
