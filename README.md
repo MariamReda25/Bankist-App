@@ -89,9 +89,9 @@ Open index.html directly in your browser
 
 🔗 [Demo](https://drive.google.com/file/d/1UL6VDAO5f0GvTiuuegAOWQxbmFM44FpX/view?usp=sharing)
 
-## 📌 Project link on Netlify :
+## 📌 Project link on Vercel :
 
-🔗 https://bankist-app-array-project.netlify.app/
+🔗[Live Demo](https://bankist-app-gilt.vercel.app/)
 
 
 ## 🙏 Acknowledgments
